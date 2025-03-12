@@ -15,6 +15,7 @@ w = np.array([1, -1, 0, 0.5])
 
 c = 0.1  
 
+l = 1
 
 def sigmoid(x):
     return 2 / (1 + np.exp(-x)) - 1  
@@ -26,7 +27,7 @@ def sigmoid_derivative(y):
 
 for i in range(len(X)):
     net = np.dot(w, X[i]) 
-    o = sigmoid(net) 
+    o = sigmoid(l*net) 
     
     f_prime = sigmoid_derivative(o)  
 

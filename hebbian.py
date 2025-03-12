@@ -12,7 +12,12 @@ w = np.array([1, -1, 0, 0.5])
 c = 1
 
 def signum(value):
-    return 1 if value >= 0 else -1
+    if value > 0:
+        return 1
+    elif value < 0:
+        return -1
+    else:
+        return 0
 
 # Hebbian Learning
 for i in range(len(X)):
